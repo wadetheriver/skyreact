@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import { GiMagicBroom } from "react-icons/gi"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container mx-auto mt-3 font-thin ">
+      <h1 className = "text-5xl">
+        <GiMagicBroom className="inline-block text-red-400 align-top"/>
+         Hello</h1>
+      <p>This is my new app.</p>
+
     </div>
   );
 }
