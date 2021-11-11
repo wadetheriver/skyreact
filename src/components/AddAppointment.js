@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { BiCalendarPlus } from "react-icons/bi";
 
+
 const AddAppointment = () => {
 
   let [toggleForm, settoggleForm] = useState(false)
 
   return (
+  // toggle a conditional class
     <div>
       <button onClick = {() => {settoggleForm(!toggleForm)}} className={`bg-blue-400 text-white px-2 py-3 w-full text-left ${toggleForm ? `rounded-t-md` : `rounded-md`}`}>
-        
+
         <div><BiCalendarPlus className="inline-block align-text-top" />  Add Appointment</div>
       </button>
 
-      
-    {toggleForm &&
+  {/* Toggle the form */}
+    {toggleForm &&      
           <div className="border-r-2 border-b-2 border-l-2 border-light-blue-500 rounded-b-md pl-4 pr-4 pb-4">
           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
             <label htmlFor="ownerName" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
@@ -44,7 +46,7 @@ const AddAppointment = () => {
                 className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
             </div>
           </div>
-  
+
           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
             <label htmlFor="aptTime" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
               Apt Time

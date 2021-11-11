@@ -8,7 +8,7 @@ import appointmentList from "./data.json"
 
 function App() {
 
-  console.log (appointmentList);
+  // console.log (appointmentList);
   return (
     <div className="App container mx-auto mt-3 font-thin ">
       <h1 className = "text-5xl">
