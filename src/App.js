@@ -1,12 +1,27 @@
+import { useState, useEffect, useCallback } from 'react'
 import { GiMagicBroom } from "react-icons/gi"
 import Search from "./components/Search"
 import AddAppointment from "./components/AddAppointment"
 import AppointmentInfo from "./components/AppointmentInfo"
-import appointmentList from "./data.json"
+// import appointmentList from "./data.json"
 
 
 
 function App() {
+
+  let [appointmentList, setAppointmentList] = useState([]);
+
+  const fetchData = useCallback(() => {
+    fetch('./data.json')
+      .then(response => response.json())
+      .then(data => {
+        setAppointmentList(data)
+      });
+  }, [])
+
+  useEffect(() => {
+    fetchData()
+  }, [fetchData]);
 
   // console.log (appointmentList);
   return (
