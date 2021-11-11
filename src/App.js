@@ -1,5 +1,7 @@
 import { GiMagicBroom } from "react-icons/gi"
-import './App.css';
+import Search from "./components/Search"
+import AddAppointment from "./components/AddAppointment"
+// import './App.css';
 
 function App() {
   return (
@@ -7,7 +9,9 @@ function App() {
       <h1 className = "text-5xl">
         <GiMagicBroom className="inline-block text-red-400 align-top"/>
          Hello</h1>
-      <p>This is my new app.</p>
+         <AddAppointment />
+         <Search />
+
 
     </div>
   );
