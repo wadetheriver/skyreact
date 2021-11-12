@@ -9,11 +9,11 @@ const AppointmentInfo = ({appointment}) => {
           <BiTrash /></button>
         <div className="flex-grow">
           <div className="flex items-center">
-            <span className="flex-none font-medium text-2xl text-blue-500">{appointment.petName}</span>
+            <span className="flex-none font-oswald font-medium text-2xl text-blue-500">{appointment.petName}</span>
             <span className="flex-grow text-right">{appointment.aptDate}</span>
           </div>
-          <div><b className="font-bold text-blue-500">Owner:</b> {appointment.ownerName}</div>
-          <div className="leading-tight">{appointment.aptNotes}</div>
+          <div><b className="font-oswald font-bold text-blue-500">Owner:</b> {appointment.ownerName}</div>
+          <div className="font-oswald font-light leading-tight">{appointment.aptNotes}</div>
         </div>
       </li>
     );
